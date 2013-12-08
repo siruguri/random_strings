@@ -19,9 +19,10 @@ module RandomStrings
 
   class Generator
     def initialize(&block)
-      @config=Config.new(:tld_list, :default_string_length)
+      @config=Config.new(:tld_list, :default_string_length, :default_number_length)
       @config.tld_list=['.com', '.org', '.net']
       @config.default_string_length=10
+      @config.default_number_length=5
 
       if block
         block.call @config
@@ -42,6 +43,14 @@ module RandomStrings
     
     def random_email
       random_string + '@' + random_string + random_array_element(@config.tld_list)
+    end
+
+    def random_digits(count=-1)
+      if count == -1
+        count = @config.default_number_length
+      end
+      selection = (Range.new('0', '9').to_a
+      count.times.map { selection[Random.rand()*selection.size] }.join ""
     end
   end
 end
