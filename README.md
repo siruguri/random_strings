@@ -21,22 +21,23 @@ Or install it yourself as:
 ## Usage
 
 Initialize like this:
-   @my_gen = RandomStrings::Generator.new do |config|
-     config.default_string_length=7
-     config.default_number_length=6
-     config.tld_list=['.net', '.my', '.ly']
-   end
+
+    @my_gen = RandomStrings::Generator.new do |config|
+      config.default_string_length=7
+      config.default_number_length=6
+      config.tld_list=['.net', '.my', '.ly']
+    end
 
 Here are a few functions you can use:
 
-   @generator=RandomStrings::Generator.new
-   a_zip=@generator.random_zip # Will look like, 40072
-   an_email=@generator.random_email # Will look, uuyhWAAJne@uuqVGjEaka.net
+    @generator=RandomStrings::Generator.new
+    a_zip=@generator.random_zip # Will look like, 40072
+    an_email=@generator.random_email # Will look, uuyhWAAJne@uuqVGjEaka.net
 
 These are composed from the following basic functions:
 
-   RandomStrings::Generator#random_digits
-   RandomStrings::Generator#random_string
+    RandomStrings::Generator#random_digits
+    RandomStrings::Generator#random_string
 
 
 ## Contributing
