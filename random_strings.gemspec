@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sameers.public@gmail.com"]
   spec.description   = %q{This gem helps you generate random string of various "types" - a random email, a random date, a random Twitter handle, etc. Or just a random string.}
   spec.summary       = %q{Do it like this: RandomString::Generator.new.random_email -> boom, you got y7nnha8@uioop.com! Most of the formats follow the Principle Of Least Surprise. Like, an email won't look like 7*6=42@hitchhiker.galaxy}
-  spec.homepage      = "http://sameer.siruguri.net/"
+  spec.homepage      = "http://github.com/siruguri/random_strings"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
