@@ -49,8 +49,12 @@ module RandomStrings
       if count == -1
         count = @config.default_number_length
       end
-      selection = (Range.new('0', '9').to_a
+      selection = Range.new('0', '9').to_a
       count.times.map { selection[Random.rand()*selection.size] }.join ""
+    end
+    
+    def random_zip
+      return random_digits 5
     end
   end
 end

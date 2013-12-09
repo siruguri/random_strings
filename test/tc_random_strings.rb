@@ -23,6 +23,13 @@ describe RandomStrings do
     end
   end
 
+  describe "when getting a zip" do
+    it "must be a five digit number" do
+      zip=@default_generator.random_zip
+      (/\d{5}/.match(zip)).wont_be_nil
+    end
+  end
+
   describe "you can get a random email" do
     it "must be a reasonable email" do
       email = @default_generator.random_email
