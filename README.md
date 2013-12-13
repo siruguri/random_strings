@@ -1,6 +1,6 @@
 # RandomStrings
 
-This gem helps you generate random string of various "types" - a random email, a random date, a random Twitter handle, etc. Or just a random string.
+This gem helps you generate random string of various "types" - a random email, a random date, a random Twitter handle, etc. Or just a random string or number.
 
 It's a great gem to use when creating seeds for database applications - like in a Rails seeds.rb file, for example. (hint, hint.)
 
@@ -32,7 +32,7 @@ Here are a few functions you can use:
 
     @generator=RandomStrings::Generator.new
     a_zip=@generator.random_zip # Will look like, 40072
-    an_email=@generator.random_email # Will look, uuyhWAAJne@uuqVGjEaka.net
+    an_email=@generator.random_email # Will look like, uuyhWAAJne@uuqVGjEaka.net
 
 These are composed from the following basic functions:
 
